@@ -22,7 +22,7 @@ import { VscFilePdf } from "react-icons/vsc";
 
 function HeroLanding() {
   return (
-    <Container maxW={"7xl"}>
+    <Container h={"100vh"} display="flex" maxW={"7xl"}>
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -37,7 +37,7 @@ function HeroLanding() {
           >
             <Text
               as={"span"}
-              color={"#45413c"}
+              color={"gray.700"}
               position={"relative"}
               _after={{
                 content: "''",
@@ -46,18 +46,26 @@ function HeroLanding() {
                 position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: "#bb8c82",
+                bg: "green.400",
                 zIndex: -1,
               }}
             >
               Nick MacKenzie
             </Text>
             <br />
-            <Text as={"span"} color={"#45413c"}>
+            <Text as={"span"} color={"gray.600"}>
               Web Developer
             </Text>
           </Heading>
-          <Text color={"gray.600"}>
+          <Text color={"gray.500"}>
+            I am a meticulous, driven, and collaborative creative thinker who
+            has worked professionally in both team and independent settings for
+            the last 12 years. As a graduate from General Assembly Software
+            Engineering Immersive program, I am proficient in JavaScript,
+            jQuery, Bootstrap, GIT/Github, CSS/SCSS MongoDB, MSSQL, NodeJS and
+            frameworks such as React and Express.
+          </Text>
+          <Text color={"gray.500"}>
             <Flex w={"300px"} justify={"space-between"}>
               <Link href="https://www.github.com/nickmackenzie" isExternal>
                 <BsGithub size={"48px"} />
@@ -89,8 +97,8 @@ function HeroLanding() {
               fontWeight={"normal"}
               px={6}
               colorScheme={"red"}
-              bg={"red.400"}
-              _hover={{ bg: "red.500" }}
+              bg={"green.600"}
+              _hover={{ bg: "green.700" }}
             >
               About
             </Button>
@@ -119,26 +127,28 @@ function HeroLanding() {
             top={"-20%"}
             left={0}
             zIndex={-1}
-            color={useColorModeValue("red.50", "red.400")}
+            color={useColorModeValue("green.50", "green.400")}
           />
-          <Box
-            position={"relative"}
-            height={"full"}
-            rounded={"2xl"}
-            boxShadow={"2xl"}
-            width={"500px"}
-            overflow={"hidden"}
-          >
-            <Image
-              alt={"Nick MacKenzie"}
-              fit={"contain"}
-              align={"center"}
-              w={"full"}
-              h={"full"}
-              //src={"https://avatars.githubusercontent.com/u/54223351?v=4"}
-              src={"https://www.nickmackenzie.dev/images/headshot.webp"}
-            />
-          </Box>
+          <Container maxW={"5xl"}>
+            <Box
+              position={"relative"}
+              height={"full"}
+              rounded={"2xl"}
+              boxShadow={"2xl"}
+              width={"auto"}
+              overflow={"hidden"}
+            >
+              <Image
+                alt={"Nick MacKenzie"}
+                fit={"contain"}
+                align={"center"}
+                w={"full"}
+                h={"full"}
+                //src={"https://avatars.githubusercontent.com/u/54223351?v=4"}
+                src={"https://www.nickmackenzie.dev/images/headshot.webp"}
+              />
+            </Box>
+          </Container>
         </Flex>
       </Stack>
     </Container>
